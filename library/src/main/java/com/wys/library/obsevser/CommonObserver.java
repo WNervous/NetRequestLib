@@ -1,11 +1,11 @@
 package com.wys.library.obsevser;
 
-import com.wys.library.bean.CommonResponse;
+import com.wys.library.bean.ComResponse;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public abstract class CommonObserver<T extends CommonResponse> implements Observer<T> {
+public abstract class CommonObserver<T extends ComResponse> implements Observer<T> {
 
     public abstract void onSuccess(T t);
 

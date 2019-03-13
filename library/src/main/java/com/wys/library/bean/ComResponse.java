@@ -2,7 +2,7 @@ package com.wys.library.bean;
 
 import org.jetbrains.annotations.NotNull;
 
-public class CommonResponse<T> {
+public class ComResponse<T> {
     private String errorMsg;
     private int    errorCode;
     private T      data;
