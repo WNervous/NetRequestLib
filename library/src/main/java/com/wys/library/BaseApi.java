@@ -21,14 +21,14 @@ public class BaseApi {
         if (builder.mLogInterceptor != null && !builder.mIsRelease) {
             clientBuilder.addInterceptor(builder.mLogInterceptor);
         }
-        if (builder.mNetworkInterceptor != null && !builder.mIsRelease) {
-            clientBuilder.addInterceptor(builder.mNetworkInterceptor);
-        }
         if (builder.mParamsInterceptor != null) {
             clientBuilder.addInterceptor(builder.mParamsInterceptor);
         }
         if (builder.mHeaderInterceptor != null) {
             clientBuilder.addInterceptor(builder.mHeaderInterceptor);
+        }
+        if (builder.mNetworkInterceptor != null && !builder.mIsRelease) {
+            clientBuilder.addNetworkInterceptor(builder.mNetworkInterceptor);
         }
         mOkHttpClient = clientBuilder.build();
 
@@ -39,7 +39,7 @@ public class BaseApi {
         return mRetorfit.create(t);
     }
 
-   public static class Builder {
+    public static class Builder {
 
         public static final long DEFAULT_TIME = 15;
 
