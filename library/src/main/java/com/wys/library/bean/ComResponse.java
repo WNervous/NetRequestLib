@@ -2,7 +2,14 @@ package com.wys.library.bean;
 
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * 数据格式响应
+ * @param <T>
+ */
 public class ComResponse<T> {
+    /**
+     * 不同的后段返回的响应字段可能不同 ，根据情况不同改变字段
+     */
     private String errorMsg;
     private int    errorCode;
     private T      data;

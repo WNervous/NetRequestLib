@@ -11,7 +11,6 @@ public class TestApi {
     public String mBaseDebugUrl = "http://www.wanandroid.com/";
 
     private BaseApi mBaseApi;
-    private BaseApi mFileApi;
 
     public static TestApi getInstance(){
         return Holder.INSTANCE;
